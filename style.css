@@ -1,0 +1,151 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background: linear-gradient(135deg, #153677, #4e085f);
+  max-height: 100vh;
+}
+
+.container {
+  width: 100%;
+  min-height: 100vh;
+  max-height: 100vh;
+
+}
+
+.to-do {
+  width: 100%;
+  max-width: 540px;
+  max-height: 90vh;
+  background: #fff;
+  margin: auto;
+  padding: 40px 30px 70px;
+  border-radius: 10px;
+  margin-top: 25px;
+  overflow-y: scroll;
+  word-wrap: break-word;
+}
+
+.to-do h2 {
+  color: #002765;
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.to-do h2 img {
+  width: 30px;
+  margin-left: 10px;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #edeef0;
+  border-radius: 30px;
+  padding-left: 20px;
+  margin-bottom: 25px;
+  /* padding: 10px 10px; */
+}
+
+input {
+  display: flex;
+  flex: 1;
+  border: none;
+  outline: none;
+  background: transparent;
+  padding: 10px;
+  font-weight: 14px;
+}
+
+
+ul li {
+    list-style: none;
+    padding: 12px 8px 12px 50px;
+  font-size: 17px;
+  user-select: none;
+  cursor: pointer;
+  position: relative;
+}
+
+ul li::before {
+    content: "";
+    position: absolute;
+    height: 28px;
+    width: 28px;
+    border-radius: 50%;
+    background-image: url(images/unchecked.png);
+    background-size: cover;
+    background-position: center;
+    top: 12px;
+    left: 8px;
+}
+
+ul li.checked {
+    text-decoration: line-through;
+    color: #555;
+}
+
+ul li.checked::before {
+    background-image: url(images/checked.png);
+}
+
+ul li span {
+    right: 0px;
+    position: absolute;
+    top: 5px;
+    width: 40px;
+    height: 40px;
+    font-size: 25px;
+    line-height: 40px;
+    text-align: center;
+    color: #555;
+}
+
+ul li span:hover {
+    background-color: #edeef0;
+    border-radius: 100%;
+}
+
+.row button, .btn{
+    border: none;
+    outline: none;
+    background: transparent;
+    padding: 16px 50px;
+    background: #ff5945;
+    color: #fff;
+    font-size: 16px;
+    border-radius: 40px;
+    cursor: pointer;
+    margin: 10px 10px;
+}
+.clear {
+    width:20%;
+    text-align: center;
+    right: -74.5%;
+    position: relative;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 7.5px;
+    padding-bottom: 7.5px;
+}
+
+/* .to-do::-webkit-scrollbar {
+} */
+.to-do::-webkit-scrollbar {
+    width: 10px;
+}
+.to-do::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 10px;
+}
+.to-do::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 10px;
+}
+.to-do::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
